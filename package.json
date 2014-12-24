@@ -1,0 +1,27 @@
+{
+  "name": "gugiserman.github.io",
+  "version": "0.0.0",
+  "description": "Gustavo Giserman's personal website",
+  "main": "index.html",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gugiserman/gugiserman.github.io"
+  },
+  "keywords": [
+    "gustavogiserman",
+    "front-end",
+    "developer",
+    "engineer",
+    "portfolio",
+    "website"
+  ],
+  "author": "Gustavo Giserman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gugiserman/gugiserman.github.io/issues"
+  },
+  "homepage": "https://github.com/gugiserman/gugiserman.github.io"
+}
