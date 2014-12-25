@@ -5,7 +5,9 @@ module.exports = (grunt) ->
 
   extraConfig =
     'gh-pages':
-      options: base: 'deploy'
+      options:
+        branch: 'master'
+        base: 'deploy'
       src: ['**']
 
   tasks =
