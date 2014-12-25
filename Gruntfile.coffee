@@ -11,7 +11,7 @@ module.exports = (grunt) ->
       src: ['**']
 
   tasks =
-    build: ['clean', 'copy:pkg', 'copy:main', 'coffee', 'less', 'ngtemplates']
+    build: ['clean', 'copy:pkg', 'copy:main', 'coffee', 'less']
     default: ['build', 'connect:http', 'watch']
     deploy: ['build', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'copy:deploy']
     'git-deploy': ['deploy', 'gh-pages']
