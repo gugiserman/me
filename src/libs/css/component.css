@@ -44,7 +44,7 @@
 .hi-icon:before {
 	font-family: 'ecoicon';
 	speak: none;
-	font-size: 48px;
+	font-size: 44px;
 	line-height: 90px;
 	font-style: normal;
 	font-weight: normal;
@@ -309,7 +309,7 @@
 .hi-icon-effect-4 .hi-icon {
 	width: 92px;
 	height: 92px;
-	box-shadow: 0 0 0 4px rgba(255,255,255,1);	
+	box-shadow: 0 0 0 4px rgba(255,255,255,1);
 }
 
 .hi-icon-effect-4a .hi-icon {
