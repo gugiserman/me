@@ -1,4 +1,5 @@
 .container {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #040418;
 }
 
@@ -24,22 +25,32 @@
     background-position: 100% 42%;
   }
 
+  &.about { background-color: #001f3f }
+
+  &.contact { background-color: #85144B }
+
 
 }
 
-.gg-centered {
+.gg-content {
   z-index: 1001;
   position: absolute;
   font-family: Helvetica, Arial, sans-serif;
   color: #eee;
-  width: 100%;
-  height: 45%;
   background-color: transparent;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+
+  &.center {
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  &.intro {
+    width: 100%;
+    height: 30%;
+  }
 
   h1 {
     text-align: center;
