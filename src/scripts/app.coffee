@@ -23,14 +23,14 @@ class i18nManager
 class DOMDesigner
   constructor: ->
     @middle()
-    @parallax()
+    @panning()
 
   middle: ->
     $this = $(this)
     $('.middle').each -> $this.css 'top', ($this.parent('section').height() - $this.height()) / 2
 
-  parallax: ->
-    $elems = $('.gg-parallax')
+  panning: ->
+    $elems = $('.gg-panning')
     mouse = x: 0, y: 0
     originalPosition = []
 
@@ -42,8 +42,8 @@ class DOMDesigner
 
     calculateNewPosition = (current, direction, diff) ->
       diffPercentage =
-        x: Math.floor ( (diff.x / $(window).height()) * 100 )
-        y: Math.floor ( (diff.y / $(window).height()) * 100 )
+        x: Math.floor ( (diff.x / $(window).height()) * 100 ) / 2
+        y: Math.floor ( (diff.y / $(window).height()) * 100 ) / 2
 
       newPosition =
         x: if direction.x is 'left' then current.x += diffPercentage.x else current.x -= diffPercentage.x
@@ -57,7 +57,7 @@ class DOMDesigner
 
       return newPosition
 
-    $(document).on 'mousemove', (e) ->
+    handlePanning = (e) ->
       x = e.clientX or e.pageX
       y = e.clientY or e.pageY
 
@@ -81,13 +81,16 @@ class DOMDesigner
         newPosition = calculateNewPosition position, direction, diff
 
         excludes =
-          x: $(this).hasClass 'gg-parallax-exclude-x'
-          y: $(this).hasClass 'gg-parallax-exclude-y'
+          x: $(this).hasClass 'gg-panning-exclude-x'
+          y: $(this).hasClass 'gg-panning-exclude-y'
 
-        newValue = "#{ if excludes.x then originalPosition[i].x else newPosition.x }% "
-        newValue += "#{ if excludes.y then originalPosition[i].y else newPosition.y }%"
+        newValue =
+          x: "#{ if excludes.x then originalPosition[i].x else newPosition.x }%"
+          y: "#{ if excludes.y then originalPosition[i].y else newPosition.y }%"
 
-        $(this).css 'background-position', newValue
+        $(this).css 'background-position', "#{ newValue.x }% #{ newValue.y }%"
+
+    $(document).on 'mousemove', handlePanning
 
 
 # Animations
