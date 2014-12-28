@@ -32,16 +32,13 @@ class DOMDesigner
 # Animations
 class Animator
   constructor: ->
-    @attachSequences()
     @bindAndListen()
-
-  attachSequences: ->
 
   bindAndListen: ->
     viewportHeight = $(window).height()
     documentScrollTop = $(document).scrollTop()
 
-    hasAnimated = ($elem) -> $elem.data 'gg-animated'
+    hasAnimated = ($elem) -> parseInt($elem.css 'opacity') > 0
 
     isVisible = ($elem) ->
       elementOffset = $elem.offset()
@@ -52,17 +49,23 @@ class Animator
 
       (elementOffset.top > minTop && elementOffset.top + elementHeight < maxTop)
 
+    whitelist = (e) -> isVisible($(e)) and !hasAnimated($(e))
 
-    fromHeaven = ($elem) -> $elem.velocity 'transition.slideDownIn', -> $elem.data 'gg-animated', true
-    fromHell = ($elem) -> $elem.velocity 'transition.slideUpIn', -> $elem.data 'gg-animated', true
+    buildSequence = ->
+      sequence = []
 
-    $('.gg-fade-slide-down').each -> fromHeaven $(this) if isVisible $(this)
-    $(window).on 'ggScrollEnd', ->
-      $('.gg-fade-slide-down').each -> fromHeaven $(this) if !hasAnimated($(this)) and isVisible($(this))
+      slideDown = _.filter $('.gg-slide-down'), whitelist
+      slideUp = _.filter $('.gg-slide-up'), whitelist
+      bounce = _.filter $('.gg-bounce'), whitelist
 
-    $('.gg-fade-slide-up').each -> fromHell $(this) if isVisible $(this)
-    $(window).on 'ggScrollEnd', ->
-      $('.gg-fade-slide-up').each -> fromHell $(this) if !hasAnimated($(this)) and isVisible($(this))
+      sequence.push elements: slideDown, properties: 'transition.slideDownIn', options: stagger: 200 if slideDown.length
+      sequence.push elements: slideUp, properties: 'transition.slideUpIn', options: stagger: 200 if slideUp.length
+      sequence.push elements: bounce, properties: 'transition.bounceIn', options: stagger: 200, sequenceQueue: false, delay: 200 if bounce.length
+
+      return sequence
+
+    $.Velocity.RunSequence buildSequence()
+    $(window).on 'ggScrollEnd', -> $.Velocity.RunSequence buildSequence()
 
 
 # App Model
