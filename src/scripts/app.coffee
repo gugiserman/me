@@ -23,11 +23,72 @@ class i18nManager
 class DOMDesigner
   constructor: ->
     @middle()
+    @parallax()
 
   middle: ->
     $this = $(this)
     $('.middle').each -> $this.css 'top', ($this.parent('section').height() - $this.height()) / 2
-      
+
+  parallax: ->
+    $elems = $('.gg-parallax')
+    mouse = x: 0, y: 0
+    originalPosition = []
+
+    $elems.each (i) ->
+      originalValue = $(this).css('background-position').split ' '
+      originalPosition[i] =
+        x: parseInt originalValue[0].replace '%', ''
+        y: parseInt originalValue[1].replace '%', ''
+
+    calculateNewPosition = (current, direction, diff) ->
+      diffPercentage =
+        x: Math.floor ( (diff.x / $(window).height()) * 100 )
+        y: Math.floor ( (diff.y / $(window).height()) * 100 )
+
+      newPosition =
+        x: if direction.x is 'left' then current.x += diffPercentage.x else current.x -= diffPercentage.x
+        y: if direction.y is 'up' then current.y -= diffPercentage.y else current.y += diffPercentage.y
+
+      if newPosition.x > 100 then newPosition.x = 100
+      if newPosition.y > 100 then newPosition.y = 100
+
+      if newPosition.x < 0 then newPosition.x = 0
+      if newPosition.y < 0 then newPosition.y = 0
+
+      return newPosition
+
+    $(document).on 'mousemove', (e) ->
+      x = e.clientX or e.pageX
+      y = e.clientY or e.pageY
+
+      direction =
+        x: if mouse.x > x then 'left' else 'right'
+        y: if mouse.y > y then 'up' else 'down'
+
+      diff =
+        x: Math.abs x - mouse.x
+        y: Math.abs y - mouse.y
+
+      mouse = _.extend mouse, x: x, y: y
+
+      $elems.each (i) ->
+        current = $(this).css('background-position').split ' '
+
+        position =
+          x: parseInt current[0].replace '%', ''
+          y: parseInt current[1].replace '%', ''
+
+        newPosition = calculateNewPosition position, direction, diff
+
+        excludes =
+          x: $(this).hasClass 'gg-parallax-exclude-x'
+          y: $(this).hasClass 'gg-parallax-exclude-y'
+
+        newValue = "#{ if excludes.x then originalPosition[i].x else newPosition.x }% "
+        newValue += "#{ if excludes.y then originalPosition[i].y else newPosition.y }%"
+
+        $(this).css 'background-position', newValue
+
 
 # Animations
 class Animator
