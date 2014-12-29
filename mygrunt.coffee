@@ -20,7 +20,7 @@ module.exports = (pkg, custom = {}) ->
       files: [
         expand: true
         cwd: 'build/'
-        src: ['**']
+        src: ['**', '!img/**']
         dest: "deploy/"
       ]
     pkg:
@@ -85,6 +85,15 @@ module.exports = (pkg, custom = {}) ->
 
   usemin:
     html: ["build/index.html", "build/index.html"]
+
+  imagemin:
+    dynamic:
+      files: [
+        expand: true
+        cwd: 'src/img/'
+        src: ['**/*.{png,jpg,gif}']
+        dest: 'deploy/img/'
+      ]
 
   connect:
     http:

@@ -13,7 +13,7 @@ module.exports = (grunt) ->
   tasks =
     build: ['clean', 'copy:pkg', 'copy:main', 'coffee', 'less']
     default: ['build', 'connect:http', 'watch']
-    deploy: ['build', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'copy:deploy']
+    deploy: ['build', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'usemin', 'imagemin', 'copy:deploy']
     'git-deploy': ['deploy', 'gh-pages']
 
   grunt.config.init config
