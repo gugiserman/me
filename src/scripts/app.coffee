@@ -26,8 +26,11 @@ class DOMDesigner
     @panning()
 
   middle: ->
-    $this = $(this)
-    $('.middle').each -> $this.css 'top', ($this.parent('section').height() - $this.height()) / 2
+    mid = ->
+      $('.middle').each -> $(this).css 'margin-top', Math.ceil (($(window).height() - $(this).height()) / 2)
+
+    mid()
+    $(window).on 'resize', mid
 
   panning: ->
     $elems = $('.gg-panning')
