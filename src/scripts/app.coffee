@@ -27,7 +27,12 @@ class DOMDesigner
 
   middle: ->
     mid = ->
-      $('.middle').each -> $(this).css 'margin-top', Math.ceil (($(window).height() - $(this).height()) / 2)
+      $('.middle').each ->
+        $this = $(this)
+        margin = Math.ceil (($(window).height() - $this.height()) / 2)
+
+        $this.css 'margin-top', margin
+        $this.css 'margin-bottom', margin
 
     mid()
     $(window).on 'resize', mid

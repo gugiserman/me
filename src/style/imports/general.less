@@ -1,6 +1,7 @@
 body {
   font-family: "Lato", georgia, serif;
   font-weight: 400;
+  color: #eee;
   background-color: #222;
 }
 
@@ -22,15 +23,9 @@ body {
   left: 5%;
 }
 
-.gg-content {
-  z-index: 1001;
-  position: relative;
-  color: #fff;
-}
-
 .gg-section {
+  &.middle {} /* relies on js */
   &.intro {
-    &.middle {} /* relies on js */
     h1 {
       font-size: 70px;
       font-weight: 400;
@@ -50,6 +45,7 @@ body {
       @media @phone { font-size: 40px }
     }
   }
+  .gg-content {}
 }
 
 .faded { opacity: .5 }
