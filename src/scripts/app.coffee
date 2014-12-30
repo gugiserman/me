@@ -107,12 +107,13 @@ class Animator
     @bindAndListen()
 
   bindAndListen: ->
-    viewportHeight = $(window).height()
-    documentScrollTop = $(document).scrollTop()
 
     hasAnimated = ($elem) -> parseInt($elem.css 'opacity') > 0
 
     isVisible = ($elem) ->
+      viewportHeight = $(window).height()
+      documentScrollTop = $(document).scrollTop()
+
       elementOffset = $elem.offset()
       elementHeight = $elem.height()
 
@@ -130,9 +131,19 @@ class Animator
       slideUp = _.filter $('.gg-slide-up'), whitelist
       bounce = _.filter $('.gg-bounce'), whitelist
 
-      sequence.push elements: slideDown, properties: 'transition.slideDownIn', options: stagger: 200 if slideDown.length
-      sequence.push elements: slideUp, properties: 'transition.slideUpIn', options: stagger: 200 if slideUp.length
-      sequence.push elements: bounce, properties: 'transition.bounceIn', options: stagger: 200, sequenceQueue: false, delay: 200 if bounce.length
+      if slideDown.length then sequence.push
+        elements: slideDown
+        properties: 'transition.slideDownIn'
+        options: stagger: 200
+
+      if slideUp.length then sequence.push
+        elements: slideUp
+        properties: 'transition.slideUpIn'
+        options: stagger: 200
+
+      if bounce.length then sequence.push
+        elements: bounce, properties: 'transition.bounceIn'
+        options: stagger: 200, sequenceQueue: false, delay: 400
 
       return sequence
 
