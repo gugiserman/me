@@ -16,7 +16,7 @@ class i18nManager
   translate: =>
     data = @data
     index = (obj, i) -> obj[i]
-    $('.gg-i18n').each -> $(this).text $(this).text().split('.').reduce index, data
+    $('[data-gg-i18n]').each -> $(this).text $(this).text().split('.').reduce index, data
 
 
 # DOM Manipulation

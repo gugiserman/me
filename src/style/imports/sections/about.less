@@ -1,0 +1,50 @@
+* { outline: none !important }
+
+.gg-content.about {
+  position: relative;
+  padding: 30px;
+  box-shadow: 0 0 50px #222;
+  .me {
+    outline: 1px dashed darkgreen;
+    text-align: center;
+    background-color: #eee;
+    color: #333;
+    img {
+      outline: 1px dashed green;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+    h1 {
+      margin-top: 0;
+      outline: 1px dashed green;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+  .skills {
+    outline: 1px dashed darkred;
+    margin-top: 60px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-align: center;
+    color: #333;
+    overflow: hidden;
+    .icon-wrapper {
+      outline: 1px dashed red;
+      float: left;
+      min-width: 25%;
+      font-size: 18px;
+      @media @phone {
+        min-width: 50%;
+        &:nth-child(1) { margin-bottom: 30px }
+        &:nth-child(2) { margin-bottom: 30px }
+      }
+      i {
+        outline: 1px dashed red;
+        font-size: 70px;
+        margin-bottom: 15px;
+      }
+      span { outline: 1px dashed red }
+    }
+  }
+}
