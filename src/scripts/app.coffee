@@ -110,9 +110,9 @@ class DOMDesigner
 # Animations
 class Animator
   constructor: ->
-    @bindAndListen()
+    @bindAndListenForSequences()
 
-  bindAndListen: ->
+  bindAndListenForSequences: ->
 
     hasAnimated = ($elem) -> parseInt($elem.css 'opacity') > 0
 

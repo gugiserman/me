@@ -30,8 +30,39 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    padding: 50px;
     background-color: #eee;
     box-sizing: border-box;
+  }
+}
+
+.gg-icon-button {
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  font-size: 36px;
+  text-decoration: none;
+  border-radius: 50%;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  margin-right: 30px;
+  background-color: #292929;
+  color: #aaa;
+  @media @phone {
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+  &:last-child { margin-right: 0 }
+  &:hover {
+    background-color: #353535;
+    color: #fff;
+    box-shadow: 0 1px 10px #191919;
+    transform: scale(1.1);
   }
 }
 
