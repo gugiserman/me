@@ -110,7 +110,20 @@ class DOMDesigner
 # Animations
 class Animator
   constructor: ->
+    @fadeOnScroll()
     @bindAndListenForSequences()
+
+  fadeOnScroll: ->
+    opacities = []
+
+    $('.gg-fade-on-scroll').each -> opacities.push $(this).css 'opacity'
+
+    $(window).on 'scroll', ->
+      $('.gg-fade-on-scroll').each (i) ->
+        $this = $(this)
+        v = (opacities[i] * 100) - (Math.floor ( ($(document).scrollTop() / $this.parent('.gg-section').height()) * 100 ) / 2)
+
+        $this.css 'opacity', parseFloat v / 100
 
   bindAndListenForSequences: ->
 
