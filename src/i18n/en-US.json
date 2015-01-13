@@ -1,5 +1,11 @@
 {
   "about": {
-    "me": "I'm a 20-year-old brazilian front-end developer, currently living in Rio de Janeiro and passionate about problem solving."
+    "me": "I'm a 20-year-old brazilian front-end developer, currently living in Rio de Janeiro and passionate about problem solving.",
+    "skills": {
+      "title": "Technologies"
+    },
+    "workflow": {
+      "title": "Workflow"
+    }
   }
 }

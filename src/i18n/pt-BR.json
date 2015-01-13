@@ -1,5 +1,11 @@
 {
   "about": {
-    "me": "Eu sou um desenvolvedor front-end, brasileiro, de 20 anos, morando no Rio de janeiro e apaixonado por resolver problemas."
+    "me": "Eu sou um desenvolvedor front-end, brasileiro, de 20 anos, morando no Rio de janeiro e apaixonado por resolver problemas.",
+    "skills": {
+      "title": "Tecnologias"
+    },
+    "workflow": {
+      "title": "Workflow"
+    }
   }
 }
