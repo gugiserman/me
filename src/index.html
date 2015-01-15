@@ -8,14 +8,12 @@
     <!-- LIBS: CSS -->
     <link rel="stylesheet" href="libs/css/normalize.min.css">
     <link rel="stylesheet" href="libs/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/css/animate.min.css">
     <link rel="stylesheet" href="libs/css/arrow-bounce.css">
 
     <!-- LIBS: JS -->
     <script src="libs/js/jquery-2.1.3.min.js"></script>
-    <script src="libs/js/underscore.min.js"></script>
-    <script src="libs/js/velocity.min.js"></script>
-    <script src="libs/js/velocity.ui.min.js"></script>
-    <script src="libs/js/modernizr.custom.js"></script>
+    <script src="libs/js/wow.min.js"></script>
 
     <!-- build:css style/style.min.css -->
     <link rel="stylesheet" href="style/style.css">
@@ -32,7 +30,7 @@
     <div class="gg-container">
 
         <div id="main" class="gg-section middle main">
-            <div class="gg-content main">
+            <div class="gg-content main wow fadeIn">
                 <h1>GUSTAVO GISERMAN</h1>
                 <h2>Front-end Developer</h2>
             </div>
@@ -43,27 +41,29 @@
         <div id="about" class="gg-section about">
             <div class="gg-content about">
                 <div class="me">
-                    <img src="http://www.gravatar.com/avatar/68831bf4981c30cb7df6cda3e11a8468.png?s=200" />
-                    <h1 data-gg-i18n>about.me</h1>
-                    <h2><span data-gg-i18n>about.co</span> <a href="http://lab.vtex.com/" alt="VTEX Lab" target="_blank">VTEX</a></h2>
+                    <img class="wow bounceIn" src="http://www.gravatar.com/avatar/68831bf4981c30cb7df6cda3e11a8468.png?s=200" />
+                    <div class="wow fadeInUp">
+                        <h1 data-gg-i18n>about.me</h1>
+                        <h2><span data-gg-i18n>about.co</span> <a href="http://lab.vtex.com/" alt="VTEX Lab" target="_blank">VTEX</a></h2>
+                    </div>
                 </div>
             </div>
 
             <div class="gg-content skills">
                 <div class="header-wrapper">
                     <h1><small><i class="fa fa-code"></i></small> <span data-gg-i18n>about.skills.title</span></h1>
-                    <h2 data-gg-i18n>about.skills.description</h2>
+                    <h2 class="wow flipInX" data-gg-i18n>about.skills.description</h2>
                 </div>
-                <div class="icon-wrapper">
+                <div class="icon-wrapper wow bounceIn">
                     <img src="/img/emblems/html5.png" alt="HTML 5"/><br><span>HTML</span>
                 </div>
-                <div class="icon-wrapper">
+                <div class="icon-wrapper wow bounceIn">
                     <img src="/img/emblems/css3.png" alt="CSS 3"/><br><span>CSS</span>
                 </div>
-                <div class="icon-wrapper">
+                <div class="icon-wrapper wow bounceIn">
                     <img src="/img/emblems/javascript6.png" alt="ECMAScript 6"/><br><span>JavaScript</span>
                 </div>
-                <div class="icon-wrapper">
+                <div class="icon-wrapper wow bounceIn">
                     <img src="/img/emblems/nodejs.png" alt="node.js"/><br><span>node.js</span>
                 </div>
             </div>
@@ -71,18 +71,18 @@
             <div class="gg-content workflow">
                 <div class="header-wrapper">
                     <h1><small><i class="fa fa-code-fork"></i></small> <span data-gg-i18n>about.workflow.title</span></h1>
-                    <h2 data-gg-i18n>about.workflow.description</h2>
+                    <h2 class="wow flipInX" data-gg-i18n>about.workflow.description</h2>
                 </div>
-                <div class="icon-wrapper">
+                <div class="icon-wrapper wow bounceIn">
                     <img src="/img/emblems/less.png" alt="Less"/><br><span>Less</span>
                 </div>
-                <div class="icon-wrapper">
+                <div class="icon-wrapper wow bounceIn">
                     <img src="/img/emblems/coffeescript.png" alt="CoffeeScript"/><br><span>CoffeeScript</span>
                 </div>
-                <div class="icon-wrapper">
+                <div class="icon-wrapper wow bounceIn">
                     <img src="/img/emblems/gruntjs.png" alt="GruntJS"/><br><span>GruntJS</span>
                 </div>
-                <div class="icon-wrapper">
+                <div class="icon-wrapper wow bounceIn">
                     <img src="/img/emblems/git.png" alt="git"/><br><span>git</span>
                 </div>
             </div>
