@@ -37,7 +37,7 @@ class Animator
     $('.wow').attr 'data-wow-duration', '1s'
     $('.wow').attr 'data-wow-offset', '60'
     $('.wow.flipInX').attr 'data-wow-duration', '1.4s'
-    new WOW().init()
+    new WOW().init mobile: false
 
   fadeOnScroll: ->
     opacities = []
