@@ -30,6 +30,7 @@ class Animator
   constructor: ->
     @wow()
     @fadeOnScroll()
+    @loader()
 
   wow: ->
     $('.wow').attr 'data-wow-delay', '.4s'
@@ -49,6 +50,13 @@ class Animator
         v = (opacities[i] * 100) - (Math.floor ( ($(document).scrollTop() / $this.parent('.gg-section').height()) * 100 ) / 2)
 
         $this.css 'opacity', parseFloat v / 100
+
+  loader: ->
+    window.onload = ->
+      $('.gg-loader').animate opacity: 0, duration: 200
+      setTimeout( (-> $('.gg-loader').remove()), 300 )
+      $('body').removeClass 'loading'
+      $('body').addClass 'ready'
 
 
 # App Model
