@@ -26,13 +26,17 @@ body {
 
 .gg-section {
   box-sizing: border-box;
-  &.middle {} /* relies on js */
+  &.middle {
+    height: 100vh;
+    width: 100vm;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
   .gg-content {
     position: relative;
-    width: 100%;
-    height: 100%;
     padding: 50px;
-    background-color: #eee;
+    background-color: #fff;
     box-sizing: border-box;
   }
 }

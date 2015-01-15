@@ -22,26 +22,7 @@ class i18nManager
 # DOM Manipulation
 class DOMDesigner
   constructor: ->
-    @middle()
     @panning()
-
-  middle: ->
-    lastMargin = null
-
-    mid = ->
-      $('.middle').each ->
-        $this = $(this)
-        margin = Math.ceil (($(window).height() - $this.height()) / 2)
-
-        return margin if lastMargin is margin
-
-        $this.css 'margin-top', margin
-        $this.css 'margin-bottom', margin
-
-        lastMargin = margin
-
-    mid()
-    $(window).on 'resize', mid
 
   panning: ->
     $elems = $('.gg-panning')
