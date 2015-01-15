@@ -1,11 +1,14 @@
 {
   "about": {
-    "me": "I'm a 20-year-old brazilian front-end developer, currently living in Rio de Janeiro and passionate about problem solving.",
+    "me": "I'm a 20-year-old brazilian front-end developer, living in Rio de Janeiro and passionate about problem solving.",
+    "co": "Currently working at",
     "skills": {
-      "title": "Technologies"
+      "title": "Technologies",
+      "description": "UI/UX Design, Frontend & Backend. The possibilities are endless."
     },
     "workflow": {
-      "title": "Workflow"
+      "title": "Workflow",
+      "description": "Up-to-date with the front-end community. Productivity and quality."
     }
   }
 }

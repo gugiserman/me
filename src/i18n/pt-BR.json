@@ -1,11 +1,14 @@
 {
   "about": {
-    "me": "Eu sou um desenvolvedor front-end, brasileiro, de 20 anos, morando no Rio de janeiro e apaixonado por resolver problemas.",
+    "me": "Eu sou um desenvolvedor front-end, brasileiro, de 20 anos, morando no Rio de Janeiro e apaixonado por resolver problemas.",
+    "co": "Atualmente trabalhando na",
     "skills": {
-      "title": "Tecnologias"
+      "title": "Tecnologias",
+      "description": "UI/UX Design, Frontend & Backend. As possibilidades são infinitas."
     },
     "workflow": {
-      "title": "Workflow"
+      "title": "Workflow",
+      "description": "Ativo com a comunidade front-end. Produtividade e qualidade."
     }
   }
 }
