@@ -1,7 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+import {
+  Header,
+  Intro,
+} from 'components/'
 
 const HomePage = () => (
-  <h1>Hello, World!</h1>
+  <div>
+    <Header />
+    <Intro />
+  </div>
 )
 
 export default HomePage
