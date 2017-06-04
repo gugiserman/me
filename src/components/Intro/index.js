@@ -4,10 +4,10 @@ import { getMyAge } from 'utils/'
 const age = getMyAge()
 
 const Intro = () => (
-  <section className="ph4 pv1 lh-copy">
-    <h3 className="db mt0 mb3 mb1-ns">
+  <section className="pa3 pa4-ns lh-copy">
+    <h2 className="db ma0 mb3 f5 f4-ns mb1-ns">
       I'm a minimalist {age}-year-old brazilian developer and passionate about web apps.
-    </h3>
+    </h2>
     <span className="db mb3 mb1-ns">
       I enjoy building things that people use online and to provide them a good experience with accessibility and performance.
     </span>
