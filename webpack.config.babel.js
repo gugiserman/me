@@ -70,19 +70,7 @@ module.exports = {
 
   resolve: {
     alias: {
-      components: path.join(__dirname, '/src/components'),
-      commons: path.join(__dirname, 'src/components/commons'),
-      utils: path.join(__dirname, '/src/utils'),
-      services: path.join(__dirname, '/src/services'),
-      models: path.join(__dirname, '/src/models'),
-      i18n: path.join(__dirname, '/src/i18n'),
       pages: path.join(__dirname, '/src/pages'),
-      mock: path.join(__dirname, '/mock'),
-      assets: path.join(__dirname, '/src/assets'),
-      style: path.join(__dirname, '/src/style'),
-      store: path.join(__dirname, '/src/store'),
-      actions: path.join(__dirname, '/src/actions'),
-      reducers: path.join(__dirname, '/src/reducers'),
     },
   },
 
