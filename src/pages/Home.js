@@ -5,6 +5,7 @@ import {
   Header,
   Intro,
   CurrentWork,
+  Contact,
 } from 'components/'
 
 const HomePage = () => (
@@ -12,6 +13,7 @@ const HomePage = () => (
     <Header />
     <Intro />
     <CurrentWork />
+    <Contact />
   </div>
 )
 
