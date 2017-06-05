@@ -1,7 +1,8 @@
 node_modules
-build
-deploy
+npm-debug.log
+
+dist
+
 .tmp
-.idea
+.vscode
 .DS_Store
-.grunt
