@@ -5,7 +5,7 @@ import facebookSVGIcon from 'assets/icons/facebook.svg'
 const getMySocialStuff = () => [
   {
     name: 'GitHub',
-    href: 'https://github.com/gugiserman',
+    href: 'https://github.com/gugiserman/gugiserman.github.io/tree/dev',
     icon: githubSVGIcon,
   },
   {
