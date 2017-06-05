@@ -11,8 +11,8 @@ const Contact = () => (
     <ul className="pa0 mt2 list">
       {links.map(({ name, href, icon }, index) => (
         <li className="pv1" key={index}>
-          <img src={icon} height="21" className="ph2 v-top" />
           <a className="link blue" href={href} target="_blank">
+            <img src={icon} height="21" className="ph2 v-top" />
             {name}
           </a>
         </li>
