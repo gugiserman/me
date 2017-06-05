@@ -9,7 +9,7 @@ const Intro = () => (
       I'm a minimalist {age}-year-old brazilian developer and passionate about web apps.
     </h2>
     <span className="db mb3 mb1-ns">
-      I enjoy delivering good UX.
+      I enjoy delivering great UX.
     </span>
     Did I mention <strong>I vape</strong>?
   </section>
