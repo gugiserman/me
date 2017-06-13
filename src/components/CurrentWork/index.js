@@ -7,7 +7,9 @@ const CurrentWork = () => (
     <h2 className="mb0 f5 f4-ns">
     <SectionIcon icon={briefcaseSVG} />
       <span>I work at</span>&nbsp;
-      <a className="link blue" target="_blank" href="//engineering.vtex.com/">VTEX</a>
+      <a className="link blue" target="_blank" href="http://engineering.vtex.com">
+        VTEX
+      </a>
     </h2>
     <p>
       We’re redefining commerce.
