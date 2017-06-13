@@ -5,7 +5,7 @@ import briefcaseSVG from 'assets/icons/briefcase.svg'
 const CurrentWork = () => (
   <section className="pa3 pa4-ns lh-copy">
     <h2 className="mb0 f5 f4-ns">
-    <SectionIcon icon={briefcaseSVG} />
+    <SectionIcon icon={briefcaseSVG} description="Briefcase icon" />
       <span>I work at</span>&nbsp;
       <a className="link blue" target="_blank" href="http://engineering.vtex.com">
         VTEX
