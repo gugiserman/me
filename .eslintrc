@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "jsx-a11y"
+  ],
+  "extends": [
+    "eslint-config-vtex",
+    "eslint-config-vtex-react",
+    "plugin:jsx-a11y/recommended"
+  ]
+}
