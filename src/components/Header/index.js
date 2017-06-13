@@ -1,7 +1,9 @@
 import React from 'react'
+import ProfilePicture from './ProfilePicture'
 
 const Header = () => (
   <header className="pa3 pa4-ns">
+    <ProfilePicture />
     <h1 className="mt0 mb1 near-black f3 f2-ns">
       Gustavo Giserman
     </h1>
