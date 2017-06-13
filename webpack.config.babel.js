@@ -7,8 +7,8 @@ import { getIfUtils, removeEmpty } from 'webpack-config-utils'
 
 const { ifProduction, ifDevelopment } = getIfUtils(process.env.NODE_ENV)
 
-const PUBLIC_PATH = '/'
-const OUTPUT_PATH = path.join(__dirname, '/dist')
+const PUBLIC_PATH = '/docs'
+const OUTPUT_PATH = path.join(__dirname, '/docs')
 const DEV_SERVER_PORT = 80
 
 module.exports = {
